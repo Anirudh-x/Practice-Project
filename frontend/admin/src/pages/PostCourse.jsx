@@ -34,7 +34,7 @@ const PostCourse = () => {
 
   return (
     <div className="border-2 border-orange-500 flex flex-col justify-center items-center rounded-xl p-4">
-      <h2 className="text-orange-500 pb-5">Post Course</h2>
+      {/* <h2 className="text-orange-500 pb-5">Post Course</h2> */}
 
       {/* <form onSubmit={handleSubmit} className="flex flex-col gap-4"> */}
       <form className="flex flex-col gap-4">
