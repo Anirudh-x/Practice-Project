@@ -8,7 +8,8 @@ function Courses() {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const response = await axios.get(`${import.meta.env.VITE_API_URL}/admin/courses`)
+    const response = await axios.get("http://localhost:3000/admin/courses")
+    // const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses")
 
     setData(response.data)
   }

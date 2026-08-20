@@ -21,7 +21,8 @@ const PostCourse = () => {
       const fetchCourseData = async () => {
         setLoading(true);
         try {
-          const response = await axios.get(`${import.meta.env.VITE_API_URL}/admin/courses`);
+          const response = await axios.get("http://localhost:3000/admin/courses");
+          // const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses");
           const course = response.data.find((c) => c._id === id);
           if (course) {
             setTitle(course.title || "");
@@ -58,10 +59,12 @@ const PostCourse = () => {
 
     try {
       if (isEditMode) {
-        await axios.put(`${import.meta.env.VITE_API_URL}/admin/courses/${id}`, courseData);
+        await axios.put(`http://localhost:3000/admin/courses/${id}`, courseData);
+        // await axios.put(`https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses/${id}`, courseData);
         alert("Course updated successfully!");
       } else {
-        await axios.post(`${import.meta.env.VITE_API_URL}/admin/courses`, courseData);
+        await axios.post("http://localhost:3000/admin/courses", courseData);
+        // await axios.post("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses", courseData);
         alert("Course created successfully!");
       }
       navigate("/admin");
