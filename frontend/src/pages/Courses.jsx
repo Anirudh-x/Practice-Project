@@ -8,8 +8,7 @@ function Courses() {
   const [data, setData] = useState([])
 
   const getData = async () => {
-    const response = await axios.get("http://localhost:3000/admin/courses")
-    // const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses")
+    const response = await axios.get("https://elearning-backend-psi.vercel.app/admin/courses")
 
     setData(response.data)
   }

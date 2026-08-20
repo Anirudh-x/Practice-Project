@@ -10,8 +10,8 @@ const AdminDashboard = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/admin/courses");
-      // const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses");
+      const response = await axios.get("https://elearning-backend-psi.vercel.app/admin/courses");
+
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
@@ -27,7 +27,7 @@ const AdminDashboard = () => {
   const handleDelete = async (id, title) => {
     if (window.confirm(`Are you sure you want to delete the course "${title}"?`)) {
       try {
-        await axios.delete(`http://localhost:3000/admin/courses/${id}`);
+        await axios.delete(`https://elearning-backend-psi.vercel.app/admin/courses/${id}`);
         alert("Course deleted successfully!");
         fetchCourses();
       } catch (error) {
