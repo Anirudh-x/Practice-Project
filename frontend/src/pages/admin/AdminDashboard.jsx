@@ -10,7 +10,8 @@ const AdminDashboard = () => {
 
   const fetchCourses = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/admin/courses");
+      // const response = await axios.get("http://localhost:3000/admin/courses");
+      const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses");
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
@@ -48,7 +49,7 @@ const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-(--color-bg) text-(--color-text) transition-colors duration-300 p-8">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 pb-6 border-b border-(--color-primary-light)">
           <div>
