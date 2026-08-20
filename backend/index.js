@@ -16,7 +16,8 @@ const app = express()
 
 // Middlewares
 app.use(express.json())
-app.use(cors({ origin: 'https://practice-project-rnt3.vercel.app' }));
+// app.use(cors({ origin: 'https://practice-project-rnt3.vercel.app' }));
+app.use(cors());
 
 app.use(authMiddleware)
 

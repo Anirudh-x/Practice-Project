@@ -10,8 +10,8 @@ const AdminDashboard = () => {
 
   const fetchCourses = async () => {
     try {
-      // const response = await axios.get("http://localhost:3000/admin/courses");
-      const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses");
+      const response = await axios.get("http://localhost:3000/admin/courses");
+      // const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses");
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching courses:", error);
