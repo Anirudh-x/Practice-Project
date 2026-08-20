@@ -10,6 +10,7 @@ const DBConnect = require("./config/db")
 
 const coursesRoute = require("./routes/coursesRoute")
 const authRoute = require("./routes/authRoute")
+const authMiddleware = require("./middlewares/authMiddleware")
 
 const app = express()
 

@@ -40,6 +40,10 @@ function Navbar() {
           <NavLink to="/contact" className={navLinkStyle}>
             Contact
           </NavLink>
+
+          <NavLink to="/admin" className={navLinkStyle}>
+            Admin
+          </NavLink>
         </div>
 
         <div className="flex gap-5 items-center">

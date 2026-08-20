@@ -8,6 +8,8 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CoursePage from "./components/CoursePage";
+import PostCourse from "./pages/admin/PostCourse";
+import AdminDashboard from "./pages/admin/AdminDashboard";
 
 function App() {
   return (
@@ -21,11 +23,12 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
 
-
-
-
         <Route path="/courses/:id" element={<CoursePage />} />
-
+        
+        {/* Admin Routes */}
+        <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/admin/create" element={<PostCourse />} />
+        <Route path="/admin/edit/:id" element={<PostCourse />} />
 
         {/* Always last */}
         <Route path="*" element={<NotFound />} />
