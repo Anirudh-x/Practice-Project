@@ -11,7 +11,8 @@ const CoursePage = () => {
   const image = "https://img.magnific.com/free-photo/learning-education-ideas-insight-intelligence-study-concept_53876-120116.jpg?semt=ais_test_b&w=740&q=80"
 
   const getCourseData = async () => {
-    const response = await axios.get("http://localhost:3000/admin/courses")
+    // const response = await axios.get("http://localhost:3000/admin/courses")
+    const response = await axios.get("https://elearning-backend-git-deployment-anirudh-xs-projects.vercel.app/admin/courses")
     const courseData = response.data.data
     const courseFound = courseData.find((course) => course.id == id)
 
