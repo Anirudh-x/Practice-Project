@@ -23,6 +23,10 @@ app.use(authMiddleware)
 // Database
 DBConnect()
 
+app.get("/", (req, res) => {
+  res.send("<h1>Server is Running</h1>")
+})
+
 // Routes
 // app.use("/user", userRoute)
 app.use("/admin/courses", coursesRoute)
